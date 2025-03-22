@@ -1,0 +1,156 @@
+import React, { useState } from "react";
+import { db, doc, getDoc, setDoc } from "../firebaseConfig"; // Firestore setup
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import send from "../assets/svg/send.svg";
+
+const EnterEmailButton = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+
+  const BEARER_TOKEN = import.meta.env.VITE_VERAFALIA_API_KEY;
+
+  const isValidEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const verifyEmail = async (email) => {
+    const API_URL = "https://api.verifalia.com/v2.6/email-validations";
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${BEARER_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          entries: [{ inputData: email }],
+        }),
+      });
+
+      const result = await response.json();
+      console.log(result);
+
+      if (result.entries?.data[0]?.classification === "Undeliverable") {
+        console.log("Invalid Email:", result);
+        return false;
+      }
+
+      console.log("Valid Email:", result);
+      return true;
+    } catch (error) {
+      console.error("Email verification failed:", error);
+      return false;
+    }
+  };
+
+  const handleClick = async () => {
+    if (!email) {
+      toast.error("Please enter an email!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const isEmailValid = await verifyEmail(email);
+
+    if (!isValidEmail(email)) {
+      toast.error("Invalid email address!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+      setIsSubmitting(false);
+      setEmail("");
+      return;
+    }
+
+    if (!isEmailValid) {
+      toast.error("Email does not exists!", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+      setIsSubmitting(false);
+      setEmail("");
+      return;
+    }
+
+    // Firestore logic remains unchanged
+    try {
+      const userRef = doc(db, "waitlist", email);
+      const userDoc = await getDoc(userRef);
+
+      if (userDoc.exists()) {
+        toast.info("You're already on the Qlueless waitlist!", {
+          position: "top-center",
+          autoClose: 3000,
+        });
+      } else {
+        await setDoc(userRef, { email, createdAt: new Date() });
+        toast.success("Welcome! You've joined the Qlueless waitlist.", {
+          position: "top-center",
+          autoClose: 3000,
+        });
+      }
+      setEmail("");
+    } catch (error) {
+      console.error("Firestore Error:", error.message);
+      toast.error("Something went wrong. Please try again.", {
+        position: "top-center",
+        autoClose: 3000,
+      });
+    }
+
+    setIsSubmitting(false);
+  };
+
+  return (
+    <div className="relative flex items-center w-full max-w-md rounded-full overflow-hidden shadow-lg">
+      <div className="relative flex w-full border border-white h-auto rounded-full ">
+        <input
+          type="email"
+          placeholder=""
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setIsFocused(email.length > 0)} // Keeps label hidden if email is entered
+          className="w-full h-[50px] bg-transparent text-white px-10 py-3 outline-none font-gilroy  transition-shadow duration-300 focus:shadow-lg tracking-[2px]"
+          disabled={isSubmitting}
+        />
+        <label
+          className={`absolute  top-3 text-white lg:text-[20px] md:text-[18px] text-[16px] ml-[27%] md:ml-[30%] lg:ml-[32%] transition-opacity duration-300 ${
+            isFocused ? "opacity-0" : "opacity-100"
+          } pointer-events-none`}
+        >
+          enter your email
+        </label>
+
+        <button
+          onClick={handleClick}
+          disabled={isSubmitting}
+          className="rounded-full w-9 h-8 md:w-11 md:h-10 mr-1 sm:mr-2 sm:mt-1 mt-2 transition-transform hover:scale-110"
+        >
+          {isSubmitting ? (
+            <div className="bg-transparent rounded-lg shadow-lg flex flex-col items-center">
+              <div className="animate-spin h-5 w-5 border-t-4 border-blue-500 mt-3 border-solid rounded-full"></div>
+              <p className="mt-3 text-black font-gilroy">
+                Signing in, please wait...
+              </p>
+            </div>
+          ) : (
+            <img src={send} />
+          )}
+        </button>
+      </div>
+
+      {/* Submit Button with Curved Right Side */}
+    </div>
+  );
+};
+
+export default EnterEmailButton;
