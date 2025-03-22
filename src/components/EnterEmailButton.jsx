@@ -123,7 +123,7 @@ const EnterEmailButton = () => {
           disabled={isSubmitting}
         />
         <label
-          className={`absolute  top-3 text-white lg:text-[20px] md:text-[18px] text-[16px] ml-[27%] md:ml-[30%] lg:ml-[32%] transition-opacity duration-300 ${
+          className={`absolute  top-3 text-white lg:text-[20px] md:text-[18px] text-[16px] ml-[20%] md:ml-[22%] lg:ml-[24%] transition-opacity duration-300 ${
             isFocused ? "opacity-0" : "opacity-100"
           } pointer-events-none`}
         >
@@ -143,7 +143,9 @@ const EnterEmailButton = () => {
               </p>
             </div>
           ) : (
-            <img src={send} />
+            <div className="ml-[4%] h-[50px] mt-[-9%] w-[50px] bg-white rounded-full flex items-center justify-center">
+              <img src={send} className="h-10 w-10" />
+            </div>
           )}
         </button>
       </div>
