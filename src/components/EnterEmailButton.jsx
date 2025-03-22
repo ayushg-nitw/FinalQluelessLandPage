@@ -105,7 +105,6 @@ const EnterEmailButton = () => {
         autoClose: 3000,
       });
     }
-
     setIsSubmitting(false);
   };
 
@@ -119,7 +118,7 @@ const EnterEmailButton = () => {
           onChange={(e) => setEmail(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(email.length > 0)} // Keeps label hidden if email is entered
-          className="w-full h-[50px] bg-transparent text-white pl-6 pr-1 py-3 outline-none font-gilroy  transition-shadow duration-300 focus:shadow-lg tracking-[2px]"
+          className="w-full h-[50px] bg-transparent text-white pl-6 pr-1 text-[18px] outline-none font-gilroy  transition-shadow duration-300 focus:shadow-lg tracking-[2px]"
           disabled={isSubmitting}
         />
         <label

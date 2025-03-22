@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center w-full max-w-[295px] mt-4">
-          <p className="mt-2 text-white-300 font-gilroyRegular text-sm sm:text-base md:text-xl">
+          <p className=" text-white-300 font-gilroyRegular text-sm sm:text-base md:text-xl">
             discover, engage, and purchase all in one seamless <br />
             experience.
           </p>
@@ -73,9 +73,9 @@ const Footer = () => {
       </div>
 
       {/* 🔹 Qlueless Large Text in Background (Centered Above Bottom) */}
-      <div className="absolute inset-x-0 -bottom-3 flex justify-center z-10 opacity-20">
+      <div className="absolute inset-x-0 bottom-5 md:bottom-[-7%] flex justify-center  opacity-15">
         <div className="font-glorita">
-          <span className=" bg-glorita-gradient md:text-[140px] text-[100px]">
+          <span className=" bg-glorita-gradient text-[100px] md:text-[200px]">
             Qlueless
           </span>
         </div>
