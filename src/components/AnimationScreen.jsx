@@ -7,7 +7,7 @@ const AnimationScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsWhiteScreen(true);
-    }, 800);
+    }, 700);
 
     setTimeout(() => {
       setSlideUp(true);

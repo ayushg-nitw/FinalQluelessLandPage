@@ -49,8 +49,8 @@ const Waitlist = () => {
         </p>
       </div>
 
-      <div className="w-full flex justify-center md:pt-[10%] lg:justify-start lg:pl-[55%] p-6 md:p-8 lg:p-10 absolute top-[25%] md:top-[30%] lg:top-[20%]">
-        <div className="mt-2 p-6 md:p-8 lg:p-10 bg-black rounded-[60px] md:rounded-[50px] border border-white w-[310px] h-[280px] md:w-[400px] lg:w-[470px]  md:h-[300px] lg:h-[316px] text-center">
+      <div className="w-full flex justify-center md:pt-[10%] lg:justify-start lg:pl-[55%] p-6 md:p-8 lg:p-10 absolute top-[25%] md:top-[30%] lg:top-[20%] border border-white border-opacity-30 ">
+        <div className="mt-2 p-6 md:p-8 lg:p-10 bg-black rounded-[60px] md:rounded-[50px]  w-[310px] h-[280px] md:w-[400px] lg:w-[470px] md:h-[300px] lg:h-[316px] text-center border border-white border-opacity-30">
           <p className="font-gilroy lg:text-[20px] md:text-[18px] text-[16px] text-white mb-2">
             join the waitlist
           </p>
