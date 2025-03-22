@@ -50,7 +50,7 @@ const Waitlist = () => {
       </div>
 
       <div className="w-full flex justify-center md:pt-[10%] lg:justify-start lg:pl-[55%] lg:p-10 absolute top-[25%] md:top-[30%] lg:top-[20%]  ">
-        <div className="mt-2 p-7 md:p-9 lg:p-11 bg-black rounded-[60px] md:rounded-[50px]  w-[310px] h-[280px] md:w-[400px] lg:w-[400px] md:h-[300px] lg:h-[325px] text-center border border-white border-opacity-30">
+        <div className="mt-2 p-6 md:p-7 lg:p-9 bg-black rounded-[60px] md:rounded-[50px]  w-[310px] h-[280px] md:w-[400px] lg:w-[400px] md:h-[300px] lg:h-[325px] text-center border border-white border-opacity-30">
           <p className="font-gilroy lg:text-[20px] md:text-[18px] text-[16px] text-white mb-2">
             join the waitlist
           </p>
@@ -60,7 +60,7 @@ const Waitlist = () => {
           </p>
           <GoogleSignInButton />
           <p className="font-gilroy lg:text-[20px] md:text-[18px] text-[16px] text-white mt-3">
-            Join the Qlue Club
+            join the Qlue club
           </p>
         </div>
       </div>

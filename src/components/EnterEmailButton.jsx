@@ -137,7 +137,7 @@ const EnterEmailButton = () => {
         >
           {isSubmitting ? (
             <div className="bg-transparent rounded-lg shadow-lg flex flex-col items-center">
-              <div className="animate-spin h-5 w-5 border-t-4 border-blue-500 mt-3 border-solid rounded-full"></div>
+              <div className="animate-spin h-5 w-5 border-t-4 border-yellow-500 mt-3 border-solid rounded-full"></div>
               <p className="mt-3 text-black font-gilroy">
                 Signing in, please wait...
               </p>
