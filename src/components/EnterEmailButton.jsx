@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { db, doc, getDoc, setDoc } from "../firebaseConfig"; // Firestore setup
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -53,6 +53,8 @@ const EnterEmailButton = () => {
         position: "top-center",
         autoClose: 3000,
       });
+      setIsSubmitting(false);
+      setIsFocused(false);
       return;
     }
 
@@ -67,6 +69,8 @@ const EnterEmailButton = () => {
       });
       setIsSubmitting(false);
       setEmail("");
+      setIsFocused(false);
+
       return;
     }
 
@@ -77,6 +81,7 @@ const EnterEmailButton = () => {
       });
       setIsSubmitting(false);
       setEmail("");
+      setIsFocused(false);
       return;
     }
 
@@ -97,15 +102,17 @@ const EnterEmailButton = () => {
           autoClose: 3000,
         });
       }
-      setEmail("");
     } catch (error) {
       console.error("Firestore Error:", error.message);
       toast.error("Something went wrong. Please try again.", {
         position: "top-center",
         autoClose: 3000,
       });
+    } finally {
+      setIsSubmitting(false);
+      setEmail("");
+      setIsFocused(false);
     }
-    setIsSubmitting(false);
   };
 
   return (
@@ -122,7 +129,7 @@ const EnterEmailButton = () => {
           disabled={isSubmitting}
         />
         <label
-          className={`absolute  top-3 text-white lg:text-[20px] md:text-[18px] text-[16px] ml-[20%] md:ml-[22%] lg:ml-[24%] transition-opacity duration-300 ${
+          className={`absolute  top-3 text-white lg:text-[20px] md:text-[18px] text-[16px] ml-[22%]  lg:ml-[24%] transition-opacity duration-300 ${
             isFocused ? "opacity-0" : "opacity-100"
           } pointer-events-none`}
         >
@@ -132,19 +139,14 @@ const EnterEmailButton = () => {
         <button
           onClick={handleClick}
           disabled={isSubmitting}
-          className="rounded-full w-9 h-8 md:w-11 md:h-10 mr-1 sm:mr-2 sm:mt-1 mt-2 transition-transform hover:scale-110"
+          className="rounded-full bg-white w-15  flex items-center justify-center transition-transform hover:scale-110"
         >
           {isSubmitting ? (
             <div className="bg-transparent rounded-lg shadow-lg flex flex-col items-center">
-              <div className="animate-spin h-5 w-5 border-t-4 border-yellow-500 mt-3 border-solid rounded-full"></div>
-              <p className="mt-3 text-black font-gilroy">
-                Signing in, please wait...
-              </p>
+              <div className="animate-spin text-white text-2xl">⏳</div>
             </div>
           ) : (
-            <div className="ml-[4%] h-[50px] mt-[-9%] w-[50px] bg-white rounded-full flex items-center justify-center">
-              <img src={send} className="h-10 w-10" />
-            </div>
+            <img src={send} className="h-10 w-10" />
           )}
         </button>
       </div>

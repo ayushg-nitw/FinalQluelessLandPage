@@ -73,9 +73,9 @@ const Footer = () => {
       </div>
 
       {/* 🔹 Qlueless Large Text in Background (Centered Above Bottom) */}
-      <div className="absolute inset-x-0 bottom-5 md:bottom-[-7%] flex justify-center  opacity-15">
+      <div className="absolute inset-x-0 bottom-5 xl:bottom-[-6%] lg:bottom-[2%] md:bottom-[1%] flex justify-center  opacity-15">
         <div className="font-glorita">
-          <span className=" bg-glorita-gradient text-[100px] md:text-[200px]">
+          <span className=" bg-glorita-gradient text-[100px] md:text-[200px] lg:text-[250px]">
             Qlueless
           </span>
         </div>

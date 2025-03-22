@@ -6,7 +6,7 @@ const ImageLayout = ({ image1, image2, title, subtitle }) => {
       {/* Image Container */}
       <div className="w-full h-[77vh] flex flex-col md:flex-row relative">
         {/* Left Image (Moves Right on Small & Medium Screens) */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-end md:justify-center md:pr-0">
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-end md:justify-center pr-6 md:pr-0">
           <img
             src={image1}
             alt="Left"

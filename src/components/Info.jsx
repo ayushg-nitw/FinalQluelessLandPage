@@ -8,10 +8,10 @@ import image6 from "../assets/Images/page4-2.jpeg";
 import Info1 from "../components/Info1";
 
 var title1 = "DISCOVER NEW TRENDY BRANDS";
-var subtitle1 = "no more redirects just one tap and it’s yours";
-var title2 = "SCROLL, GET INSPIRED SHOP INSTANTLY";
-var subtitle2 =
+var subtitle1 =
   "no more endless quest just the next big thing right at your fingertips";
+var title2 = "SCROLL, GET INSPIRED SHOP INSTANTLY";
+var subtitle2 = "no more redirects just one tap and it’s yours";
 var title3 = "A COMMUNITY THAT SHOPS SHARES AND INSPIRES";
 var subtitle3 =
   "no more lonely checkouts join people who love fashion as much as you do.";

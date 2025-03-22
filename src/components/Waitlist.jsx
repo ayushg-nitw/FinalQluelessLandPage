@@ -43,13 +43,13 @@ const Waitlist = () => {
         <span className=" bg-glorita-gradient">Qlue</span>
       </div>
 
-      <div className="absolute text-center text-[20px] md:text-[35px] lg:text-[40px] top-[18%] md:top-[28%] left-[50%] translate-x-[-50%] lg:top-[40%] lg:left-[20%] lg:translate-x-0 leading-[25px] md:leading-[40px] lg:leading-[45px]">
+      <div className="sm:w-[250px] md:w-[400px] absolute text-center text-[25px] md:text-[35px] lg:text-[40px] top-[17%] md:top-[25%] left-[50%] translate-x-[-50%] lg:top-[30%] lg:left-[15%] xl:top-[40%] lg:translate-x-0 leading-[25px] md:leading-[40px] lg:leading-[45px]">
         <p className="font-gilroyRegular">
           LOST IN STYLE <br /> FOUND IN FASHION
         </p>
       </div>
 
-      <div className="w-full flex justify-center md:pt-[10%] lg:justify-start lg:pl-[55%] lg:p-10 absolute top-[25%] md:top-[30%] lg:top-[20%]  ">
+      <div className="w-full flex justify-center md:pt-[10%] lg:justify-start lg:pl-[55%] lg:p-10 absolute top-[30%] lg:top-[20%]  ">
         <div className="mt-2 p-6 md:p-7 lg:p-9 bg-black rounded-[60px] md:rounded-[50px]  w-[310px] h-[280px] md:w-[400px] lg:w-[400px] md:h-[300px] lg:h-[325px] text-center border border-white border-opacity-30">
           <p className="font-gilroy lg:text-[20px] md:text-[18px] text-[16px] text-white mb-2">
             join the waitlist
