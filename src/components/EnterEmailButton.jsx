@@ -52,6 +52,10 @@ const EnterEmailButton = () => {
       toast.error("Please enter an email!", {
         position: "top-center",
         autoClose: 3000,
+        style: {
+          background: "#ffffff", // White background
+          color: "#000000", // Black text
+        },
       });
       setIsSubmitting(false);
       setIsFocused(false);
@@ -66,6 +70,10 @@ const EnterEmailButton = () => {
       toast.error("Invalid email address!", {
         position: "top-center",
         autoClose: 3000,
+        style: {
+          background: "#ffffff", // White background
+          color: "#000000", // Black text
+        },
       });
       setIsSubmitting(false);
       setEmail("");
@@ -78,6 +86,10 @@ const EnterEmailButton = () => {
       toast.error("Email does not exists!", {
         position: "top-center",
         autoClose: 3000,
+        style: {
+          background: "#ffffff", // White background
+          color: "#000000", // Black text
+        },
       });
       setIsSubmitting(false);
       setEmail("");
@@ -94,12 +106,20 @@ const EnterEmailButton = () => {
         toast.info("You're already on the Qlueless waitlist!", {
           position: "top-center",
           autoClose: 3000,
+          style: {
+            background: "#ffffff", // White background
+            color: "#000000", // Black text
+          },
         });
       } else {
         await setDoc(userRef, { email, createdAt: new Date() });
         toast.success("Welcome! You've joined the Qlueless waitlist.", {
           position: "top-center",
           autoClose: 3000,
+          style: {
+            background: "#ffffff", // White background
+            color: "#000000", // Black text
+          },
         });
       }
     } catch (error) {
@@ -107,6 +127,10 @@ const EnterEmailButton = () => {
       toast.error("Something went wrong. Please try again.", {
         position: "top-center",
         autoClose: 3000,
+        style: {
+          background: "#ffffff", // White background
+          color: "#000000", // Black text
+        },
       });
     } finally {
       setIsSubmitting(false);
@@ -142,8 +166,8 @@ const EnterEmailButton = () => {
           className="rounded-full bg-white w-15  flex items-center justify-center transition-transform hover:scale-110"
         >
           {isSubmitting ? (
-            <div className="bg-transparent rounded-lg shadow-lg flex flex-col items-center">
-              <div className="animate-spin text-white text-2xl">⏳</div>
+            <div className="bg-white rounded-full shadow-lg flex flex-col items-center">
+              <div className="animate-spin h-6 w-6 border-t-4 border-black mt-1 border-solid rounded-full"></div>
             </div>
           ) : (
             <img src={send} className="h-10 w-10" />

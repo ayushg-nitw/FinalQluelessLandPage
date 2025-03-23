@@ -84,7 +84,7 @@ const GoogleSignInButton = () => {
       {isSubmitting && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-transparent p-6 rounded-lg shadow-lg flex flex-col items-center">
-            <div className="animate-spin h-10 w-10 border-t-4 border-yellow-500 border-solid rounded-full"></div>
+            <div className="animate-spin h-10 w-10 border-t-4 border-white-500 border-solid rounded-full"></div>
             <p className="mt-3 text-black font-gilroy">
               Signing in, please wait...
             </p>
