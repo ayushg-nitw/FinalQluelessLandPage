@@ -163,7 +163,7 @@ const EnterEmailButton = () => {
         <button
           onClick={handleClick}
           disabled={isSubmitting}
-          className="rounded-full bg-white w-15  flex items-center justify-center transition-transform hover:scale-110"
+          className="rounded-full bg-white w-15  flex items-center justify-center transition-transform hover:scale-105"
         >
           {isSubmitting ? (
             <div className="bg-white rounded-full shadow-lg flex flex-col items-center">

@@ -33,7 +33,7 @@ const Waitlist = () => {
     >
       <div className="w-screen h-screen relative">
         <img
-          className="w-full h-full object-cover opacity-30  "
+          className="w-full h-full object-cover object-[90%_10%] opacity-30  "
           src={img1}
           alt="Background"
         />
