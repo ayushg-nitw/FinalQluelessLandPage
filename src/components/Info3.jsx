@@ -28,13 +28,13 @@ const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
       </div>
 
       {/* Text Container */}
-      <div className="w-full h-[23vh] flex flex-col text-center items-center justify-center bg-white p-4">
+      <div className="w-full h-[23vh] flex flex-col text-center items-center justify-center bg-black p-4">
         <div className=" w-[300px] md:w-[400px] ">
-          <h2 className="text-[26px] md:text-[28px] lg:text-[30px] font-gilroyRegular">
+          <h2 className="text-white text-[26px] md:text-[28px] lg:text-[30px] font-gilroyRegular">
             {title}
           </h2>
         </div>
-        <p className="text-[20px] md:text-[22px] lg:text-[26px] text-black  md:mt-2 font-gilroyLight">
+        <p className="text-[20px] md:text-[22px] lg:text-[26px] text-white  md:mt-2 font-gilroyLight">
           {subtitle}
         </p>
       </div>
