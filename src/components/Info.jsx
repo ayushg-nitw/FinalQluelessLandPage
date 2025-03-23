@@ -7,6 +7,8 @@ import image5 from "../assets/Images/page4-1.jpg";
 import image6 from "../assets/Images/page4-2.jpeg";
 import Info1 from "../components/Info1";
 import video1 from "../assets/video/video1.mp4";
+import video2 from "../assets/video/video2.mp4";
+import Info2 from "../components/Info2";
 
 var title1 = "DISCOVER NEW TRENDY BRANDS";
 var subtitle1 =
@@ -27,8 +29,8 @@ const Info = () => {
         subtitle={subtitle1}
       />
 
-      <Info1
-        videosrc={video1}
+      <Info2
+        videosrc={video2}
         image2={image4}
         title={title2}
         subtitle={subtitle2}

@@ -7,22 +7,22 @@ const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
       <div className="w-full h-[77vh] flex flex-col md:flex-row relative">
         {/* Left Image (Moves Right on Small & Medium Screens) */}
         <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-end md:justify-center pr-6 md:pr-0">
+          <img
+            src={image2}
+            alt="Left"
+            className={`w-[80%] h-full object-cover object-[90%_10%] md:w-full`}
+          />
+        </div>
+
+        {/* Right Image (Moves Down with Right Margin on Small & Medium Screens) */}
+        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-start md:items-center justify-start md:justify-center -mt-10 md:mt-0 ml-6 md:ml-0">
           <video
             src={videosrc}
             autoPlay
             loop
             muted
             playsInline
-            className="w-[80%] h-full object-cover object-[90%_10%] md:w-full"
-          />
-        </div>
-
-        {/* Right Image (Moves Down with Right Margin on Small & Medium Screens) */}
-        <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-start md:items-center justify-start md:justify-center -mt-10 md:mt-0 ml-6 md:ml-0">
-          <img
-            src={image2}
-            alt="Right"
-            className={`w-[70%] h-full object-cover object-[90%_10%] md:w-full`}
+            className="w-[80%] h-full object-cover object-[50%_50%] md:w-full"
           />
         </div>
       </div>
