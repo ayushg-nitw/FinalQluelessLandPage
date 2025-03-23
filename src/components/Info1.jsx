@@ -1,16 +1,19 @@
 import React from "react";
 
-const ImageLayout = ({ image1, image2, title, subtitle }) => {
+const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
   return (
     <div className="w-full h-screen flex flex-col bg-white ">
       {/* Image Container */}
       <div className="w-full h-[77vh] flex flex-col md:flex-row relative">
         {/* Left Image (Moves Right on Small & Medium Screens) */}
         <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-end md:justify-center pr-6 md:pr-0">
-          <img
-            src={image1}
-            alt="Left"
-            className={`w-[80%] h-full object-cover object-[90%_10%] md:w-full`}
+          <video
+            src={videosrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-[80%] h-full object-cover object-[90%_10%] md:w-full"
           />
         </div>
 
