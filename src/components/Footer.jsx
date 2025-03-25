@@ -35,7 +35,7 @@ const Footer = () => {
           </span>
         </div>
 
-        <div className="text-center w-full max-w-[295px] mt-4">
+        <div className="text-center w-full max-w-[295px] mt-1">
           <p className=" text-white-300 font-gilroyRegular text-sm sm:text-base md:text-xl">
             discover, engage, and purchase all in one seamless <br />
             experience.
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* 🔹 Coming Soon Button */}
-        <button className="mt-6 sm:mt-8 bg-white w-[130px] sm:w-[150px] h-[40px] sm:h-[45px] text-black text-sm sm:text-lg px-4 py-2 rounded-full font-gilroy transition-all duration-200 hover:scale-105">
+        <button className="mt-4 sm:mt-3 bg-white w-[130px] sm:w-[150px] h-[40px] sm:h-[45px] text-black text-sm sm:text-lg px-4 py-2 rounded-full font-gilroy transition-all duration-200 hover:scale-105">
           coming soon
         </button>
 

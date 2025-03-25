@@ -22,7 +22,7 @@ const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
             loop
             muted
             playsInline
-            className="w-[80%] h-full object-cover object-[50%_50%] md:w-full"
+            className="w-[80%] h-full object-cover object-[40%_50%] md:w-full"
           />
         </div>
       </div>
