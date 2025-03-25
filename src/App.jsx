@@ -47,7 +47,7 @@ function App() {
             videosrc={video1}
             image2={image2}
             title="DISCOVER NEW TRENDY BRANDS"
-            subtitle="no more endless quest just the next big thing right at your fingertips"
+            subtitle="no more endless quest - just the next big thing right at your fingertips"
           />
         </section>
 
@@ -56,7 +56,7 @@ function App() {
             videosrc={video2}
             image2={image4}
             title="SCROLL, GET INSPIRED SHOP INSTANTLY"
-            subtitle="no more redirects just one tap and it’s yours"
+            subtitle="no more redirects - just one tap and it’s yours"
           />
         </section>
 
@@ -65,7 +65,7 @@ function App() {
             videosrc={video3}
             image2={image6}
             title="A COMMUNITY THAT SHOPS SHARES AND INSPIRES"
-            subtitle="no more lonely checkouts join people who love fashion as much as you do."
+            subtitle="no more lonely checkouts - join people who love fashion as much as you do."
           />
         </section>
 

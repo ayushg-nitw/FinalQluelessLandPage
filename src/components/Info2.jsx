@@ -10,7 +10,7 @@ const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
           <img
             src={image2}
             alt="Left"
-            className={`w-[80%] h-full object-cover object-[90%_10%] md:w-full`}
+            className={`w-[80%] h-full object-cover object-[30%_70%] md:w-full`}
           />
         </div>
 

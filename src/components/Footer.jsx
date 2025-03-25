@@ -24,12 +24,13 @@ const Footer = () => {
       {/* 🔹 Center Content */}
       <div className="text-center -mt-[10%] flex flex-col justify-center items-center relative z-10 px-4 sm:px-8">
         <div className="flex flex-col md:text-[30px] text-[28px]  font-gilroy">
-          <span> THE BEST FINDS ARE</span>
-          <span> NEVER OBVIOUS</span>
+          <span> EVERY NEW TREND </span>
+          <span> STARTS WITH </span>
           <span>
-            THEY ARE{" "}
+            A{" "}
             <span className="bg-glorita-gradient font-gilroyRegular">
-              QLUELESS
+              {" "}
+              QLUE
             </span>
           </span>
         </div>
@@ -76,7 +77,7 @@ const Footer = () => {
       <div className="absolute inset-x-0 bottom-5 xl:bottom-[-6%] lg:bottom-[2%] md:bottom-[1%] flex justify-center  opacity-15">
         <div className="font-glorita">
           <span className=" bg-glorita-gradient text-[100px] md:text-[200px] lg:text-[250px]">
-            Qlueless
+            Qlue
           </span>
         </div>
       </div>
