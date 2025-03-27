@@ -23,7 +23,7 @@ const AnimationScreen = () => {
     >
       <div className="font-glorita ">
         <span className="bg-glorita-gradient text-[70px] sm:text-[110px] ">
-          {isWhiteScreen ? " Qlueless?" : "feeling"}
+          {isWhiteScreen ? "Qlue in" : "Lost?"}
         </span>
       </div>
     </motion.div>

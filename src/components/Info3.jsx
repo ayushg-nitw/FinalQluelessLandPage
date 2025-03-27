@@ -22,7 +22,7 @@ const ImageLayout = ({ videosrc, image2, title, subtitle }) => {
           <img
             src={image2}
             alt="Right"
-            className={`w-[70%] h-full object-cover object-[90%_10%] md:w-full`}
+            className={`w-[70%] h-full object-cover md:object-[50%_10%] object-[90%_10%] md:w-full`}
           />
         </div>
       </div>

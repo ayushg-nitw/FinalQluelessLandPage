@@ -31,7 +31,11 @@ const GoogleSignInButton = () => {
         // If user already exists, show message
         toast.info(" You're already on the waitlist. Stay tuned!", {
           position: "top-center",
-          autoClose: 3000, // Automatically close after 3s
+          autoClose: 3000, // Automatically close after 3s,
+          style: {
+            background: "#ffffff", // White background
+            color: "#000000", // Black text
+          },
         });
       } else {
         // Store user data in Firestore
@@ -53,6 +57,10 @@ const GoogleSignInButton = () => {
           {
             position: "top-center",
             autoClose: 3000,
+            style: {
+              background: "#ffffff", // White background
+              color: "#000000", // Black text
+            },
           }
         );
       }
@@ -64,6 +72,10 @@ const GoogleSignInButton = () => {
         toast.warning("Sign-in was canceled. Try again!", {
           position: "top-center",
           autoClose: 3000,
+          style: {
+            background: "#ffffff", // White background
+            color: "#000000", // Black text
+          },
         });
         setIsSubmitting(false);
         return;
@@ -73,6 +85,10 @@ const GoogleSignInButton = () => {
       toast.error("Something went wrong. Please try again.", {
         position: "top-center",
         autoClose: 3000,
+        style: {
+          background: "#ffffff", // White background
+          color: "#000000", // Black text
+        },
       });
     }
     setIsSubmitting(false); // Ensure it's reset in all cases
@@ -85,9 +101,6 @@ const GoogleSignInButton = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-transparent p-6 rounded-lg shadow-lg flex flex-col items-center">
             <div className="animate-spin h-10 w-10 border-t-4 border-white-500 border-solid rounded-full"></div>
-            <p className="mt-3 text-black font-gilroy">
-              Signing in, please wait...
-            </p>
           </div>
         </div>
       )}
